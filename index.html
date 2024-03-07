@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>S.S. Construction</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+<style>
+  .mySlides {display:none;}
+  @media all and (max-width: 300px) {
+    .mySlides {
+      height:50px;
+      width:fit-content;
+    }
+  }
+</style>
+
+<body>
+
+<!-- Navbar (sit on top)
+Check us out on facebook 
+remove title -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="#home" class="w3-bar-item w3-button"><b>S.S.</b> Construction</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="#projects" class="w3-bar-item w3-button">Projects</a>
+      <a href="#about" class="w3-bar-item w3-button">About</a>
+      <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:100%; height:auto;" id="home">
+
+    <img class="mySlides" src="https://i.imgur.com/7HEQ3bj.jpg" style="width:100%; height:auto">
+    <img class="mySlides" src="https://i.imgur.com/4GBmbPF.jpg" style="width:100%; height:auto">
+    <img class="mySlides" src="https://i.imgur.com/wA0ou1a.jpg" style="width:100%; height:auto">
+    <img class="mySlides" src="https://i.imgur.com/1ZguWHo.jpg" style="width:100%; height:auto">
+    <img class="mySlides" src="https://i.imgur.com/bONlSlM.jpg" style="width:100%; height:auto">
+  </div>
+
+</header>
+
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1564px; text-align: center;">
+
+  <!-- Project Section -->
+  <div class="w3-container w3-padding-32" id="projects">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Recent Projects</h3>
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-col l4 m4 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Commercial</div>
+        <img src="https://i.imgur.com/v2fuGE6.jpg" alt="House" style="width:200px; height:100px;">
+      </div>
+    </div>
+    <div class="w3-col l4 m4 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Steel</div>
+        <img src="https://i.imgur.com/0dV2Mkf.jpg" alt="House" style="width:200px; height:100px;">
+      </div>
+    </div>
+    <div class="w3-col l4 m4 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Residential</div>
+        <img src="https://i.imgur.com/bONlSlM.jpg" alt="House" style="width:200px; height:100px;">
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32" id="about">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">About</h3>
+    <p>S.S. Construction specializes in Residential and Commercial construction with a Personalized Service.
+    </p>
+    <p>Check us out on Facebook</p>
+    <a href="https://www.facebook.com/profile.php?id=100082227863821&mibextid=LQQJ4d
+    " target="_blank"><img src="https://dlvrit.com/blog/wp-content/uploads/2010/07/facebook_logo.png" alt="facebookThumbnail" style="width:50px; height:50px"></a>
+    
+  </div>
+
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m1 m6 w3-margin-bottom">
+      <h3>Sean Swearingen</h3>
+      <p>478-288-0557</p>
+
+      
+    </div>
+
+    <div class="w3-col m1 m6 w3-margin-bottom">
+      <h3>Kell Kiker</h3>
+      <p>706-669-1926</p>
+      
+    </div>
+
+
+  <!-- Contact Section -->
+  <div class="w3-container w3-padding-32" id="contact">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contact</h3>
+    <p>Lets get in touch and talk about your next project.</p>
+    <form action="https://formsubmit.co/ssconstructioncontactemail@gmail.com " method="POST">
+      <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+      <input class="w3-input w3-section w3-border" type="text" placeholder="Email" required name="Email">
+      <input class="w3-input w3-section w3-border" type="text" placeholder="Subject" required name="Subject">
+      <input class="w3-input w3-section w3-border" type="text" placeholder="Comment" required name="Comment">
+      <button class="w3-button w3-black w3-section" type="submit">
+        <i class="fa fa-paper-plane"></i> SEND MESSAGE
+      </button>
+    </form>
+  </div>
+  
+
+<!-- End page content -->
+</div>
+</body>
+
+<script>
+  function myFunction() {
+    var x = document.getElementById("contactButton");
+    if(x.style.display === "none") {
+      x.style.display = "block"
+    }
+  }
+
+  var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 3000); // Change image every 2 seconds
+}
+
+
+
+
+</script>
+</html>
